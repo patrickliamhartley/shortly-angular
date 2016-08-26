@@ -1,5 +1,22 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links) {
-  // Your code here
+  // console.log('LinksController called');
+  $scope.data = {};
+
+
+  // Links.getAll();
+
+  $scope.getAll = function () {
+    // console.log('getAll called');
+    Links.getAll()
+      .then( function (linkArray) {
+        $scope.data.links = linkArray;
+
+      });
+  };
+
+  $scope.getAll();
+
+
 });
