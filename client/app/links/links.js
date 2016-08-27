@@ -4,19 +4,14 @@ angular.module('shortly.links', [])
   // console.log('LinksController called');
   $scope.data = {};
 
-
-  // Links.getAll();
-
   $scope.getAll = function () {
     // console.log('getAll called');
     Links.getAll()
       .then( function (linkArray) {
         $scope.data.links = linkArray;
-
       });
   };
 
   $scope.getAll();
-
 
 });

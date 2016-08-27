@@ -19,8 +19,6 @@ angular.module('shortly.services', [])
     });
   };
 
-
-
   return {
     getAll: getAll,
     addOne: addOne
