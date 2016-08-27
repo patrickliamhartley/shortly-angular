@@ -1,7 +1,16 @@
 <div ng-controller='ShortenController' id='container'>
-  <h2>PASTE LINK HERE</h2>
-  <input ng-model='inLink'>
-  <button ng-click='addLink(inLink)'>SHORTEN</button>
+  <h2>PASTE LINK HERE!!!!!</h2>
+  <form name= 'linkshort'>
+    
+  <input name='input' type="url" ng-model='inLink' required>
+  <button ng-show="!linkshort.input.$error.required && !linkshort.input.$error.url" ng-click='addLink(inLink); inLink=""'>SHORTEN</button>
+  <div role='alert'>
+    <span class="error" ng-show="linkshort.input.$error.required">
+      URL format Required!</span>
+    <span class="error" ng-show="linkshort.input.$error.url">
+      Not yet a valid url!</span>
+  </div>
+  </form>
 <!-- Your code here -->
 
 </div>
