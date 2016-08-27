@@ -7,13 +7,15 @@
   </head>
   <body>
     <h1>Shortly</h1>
-    <nav>
-      <a href="/#/links">Home</a>
-      <a href="/#/shorten">Shorten</a>
-      <a href="/#/signin">Login</a>
-      <a href="/#/signup">Signup</a>
-      <a href="/#/logout">Logout</a>
-    </nav>
+    <div class='navigation'>
+      <ul>
+        <li><a href="/#/" class="index">Home</a></li>
+        <li><a href="/#/shorten" class="create">Shorten</a></li>
+        <li><a href="/#/signin" class="index">Login</a></li>
+        <li><a href="/#/signup" class="index">Signup</a></li>
+        <li><a href="/#/logout" class="logout">Logout</a></li>
+      </ul>
+    </div>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ng-view></div>
