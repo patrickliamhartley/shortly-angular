@@ -120,6 +120,16 @@ input[type=url]:focus {
   margin: 0 10px;
 }
 
+.username{
+  position: absolute;
+  left:400px;
+  top:160px;
+}
+.password{
+  position: absolute;
+  left:400px;
+  top:210px;
+}
 .clean {
   border: #efe solid 2px;
   padding: 10px;

@@ -1,9 +1,15 @@
 <div id='signup'>
   <h1>signup</h1>
   <form name="signupForm" ng-submit='signup()'>
-    <input type='text' ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+    <input name= "username" type='text' ng-model='user.username' required pattern=".{4,}">
+    <input name= "password" type="password" ng-model='user.password' required pattern=".{4,}">
     <button>signup</button>
+    <div role='alert'>
+    <span class="error username" ng-show="signinForm.username.$error.pattern">
+      USERNAME REQUIRES AT LEAST 4 CHARACTERS</span>
+    <span class="error password" ng-show="signinForm.password.$error.pattern">
+      PASSWORD REQUIRE AT LEAST 4 CHARACTERS</span>
+  </div>
   </form>
   <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
 </div>
