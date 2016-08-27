@@ -1,8 +1,14 @@
 <div ng-controller="LinksController"  id='container'>
+  <!-- Your html here -->
   <h2>cool links</h2>
 
   <ul>
-    <li ng-repeat="value in data">{{value}}</li>
+    <li ng-repeat="link in data.links"><a href="{{ link.url }}">{{ link.title }}</a></li>
   </ul>
-  <!-- Your html here -->
+
+  <pre>
+    {{ data.links | json }}
+  </pre>
+    }
+
 </div>

@@ -6,6 +6,7 @@ angular.module('shortly.shorten', [])
 
   $scope.addLink = function(url) {
     console.log('shorten addLink');
+    // $scope.link.url=url;
     Links.addOne(url);
   };
 
